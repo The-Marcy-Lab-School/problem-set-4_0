@@ -5,13 +5,13 @@
 Answer short response questions directly in this markdown file. Answer questions in 2 - 3 sentences. Be sure to format your responses appropriately.
 
 **1. What is encapsulation? Why do we use it? How do objects enable it?**
-
+       Encapsulation is when a set of implementations are stored in the interface of objects allowing them to be distinguished. Objects enable encapsulation by key-value pairs, the key/property (interface) and value/funionality (implementation)
 **2. How do objects encapsulate state? How do they encapsulate behavior?**
-
+      Objects encapsulate state by assigning a value to a property, and behavior by using methods
 **3. How do we create _private data_ within JavaScript objects? What is the role of _accessor properties_?**
-
+      In order to create private data we have to put an underscore infront of the property name. The purpose in accessor propertiesis is to either get and return internal properties of an object or reassign values of internal properties of an object.
 **4. What are factory functions and why are they useful?**
-
+      Factory functions are functions that produce object instances with an encapsulation of different properties and methods. They are useful when you want to create multiple objects that should have the same properties and methods.
 ### Coding Practice
 Answer the questions in this section in the `exercises.js` file in this directory. Test are included. Install with `npm install`. Test with `npm test`. Lint with `npx eslint exercises.js`
 

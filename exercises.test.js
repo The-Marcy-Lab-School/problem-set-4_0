@@ -1,4 +1,4 @@
-const { cellphone, makeCellPhone } = require(./exercises);
+const { cellphone, makeCellPhone } = require('./exercises');
 
 test('has phoneNumber property of 10 digits', () => {
   expect(cellphone.phoneNumber).toMatch(/\d{10}/);
