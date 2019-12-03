@@ -20,6 +20,8 @@ const cellphone = {
       if(key.name == str) {
         delete key.name;
         delete key.phoneNumber;
+        // this.contacts.filter( (data) => { return data != undefined || null || NaN || "" }); 
+        // Above line is to remove empty objects within array.
         return `${str} successfully deleted.`
       }
     }
@@ -31,6 +33,12 @@ const cellphone = {
       else { return 'Contact not found.'}
     }
   },
+  makeCellPhone(phoneNumber, model) {
+    return {};
+    This function should return an object with all of the properties and methods that we defined above. 
+    This function should take two string arguments such that 
+    the resulting cellphone object should be initialized with a phoneNumber and a model.
+  }
 };
 
 cellphone.model = 'iPhone X iOS 13.2.2 #Checkra1n';
