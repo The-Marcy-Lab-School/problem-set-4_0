@@ -5,13 +5,13 @@
 Answer short response questions directly in this markdown file. Answer questions in 2 - 3 sentences. Be sure to format your responses appropriately.
 
 **1. What is encapsulation? Why do we use it? How do objects enable it?**
-
+- Encapsulation is making sure a piece of a program is kept private, meaning it should not be touched by anyone, versus making it public so that others can interact with this piece of code. This can be useful if you want the users to interact with this part of the code in a specific way, and make sure they input the right things to ensure an accurate computation of the data. Object methods like get and set, as well as an underscore, can influence the way we read these objects, and how to go about interacting with this data.
 **2. How do objects encapsulate state? How do they encapsulate behavior?**
-
+- If you want the data to be in a specific state, the object methods can specify this. By making strict data comparisons and guiding the data to a specific state, you can avoid results that will show errors or come out inaccurately. As with behavior, or methods, they make things strict by calling on methods that specify whether data is private or public, which can influence its access.
 **3. How do we create _private data_ within JavaScript objects? What is the role of _accessor properties_?**
-
+- To create private data, simply add an underscore in front of a key or method. Accessor proprties specify to the user whether the data is being set, or being gotten, which can influence how the data is used or manipulated.
 **4. What are factory functions and why are they useful?**
-
+- They add more flexibility to objects by allowing you to create as many objects as you want with a few parameters, much like creating a factory. It can save time and make it easy to create objects.
 ### Coding Practice
 Answer the questions in this section in the `exercises.js` file in this directory. Test are included. Install with `npm install`. Test with `npm test`. Lint with `npx eslint exercises.js`
 
