@@ -6,11 +6,23 @@ Answer short response questions directly in this markdown file. Answer questions
 
 **1. What is encapsulation? Why do we use it? How do objects enable it?**
 
+      Encapsulation is the concept of collecting information and creating object methods that have restrictive access to said data.
+      A good example of this is the Math object. Math is an object with data that is held privately and cannot be accessed unless you use
+      one of Math's object methods, like Math.Sqrt or Math.random. These methods execute code that we cannot see from the outside but have access to
+      solely because we used the proper method to access it.
+
 **2. How do objects encapsulate state? How do they encapsulate behavior?**
+      
+      
 
 **3. How do we create _private data_ within JavaScript objects? What is the role of _accessor properties_?**
 
 **4. What are factory functions and why are they useful?**
+
+      A factory function is essentially a function that returns a new object.
+      (incomplete).
+      
+Factory functions have always been attractive in JavaScript because they
 
 ### Coding Practice
 Answer the questions in this section in the `exercises.js` file in this directory. Test are included. Install with `npm install`. Test with `npm test`. Lint with `npx eslint exercises.js`
