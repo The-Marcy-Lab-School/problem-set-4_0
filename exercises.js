@@ -5,8 +5,8 @@ const cellphone = {
     return `${name} successfully added`;
   },
   numberOfContacts() {
-    return Object.keys(cellphone.contacts).length;
-  }
+    return this.contacts.length;
+  },
 };
 
 cellphone.model = 'iPhone X iOS 13.2.2 #Checkra1n';
