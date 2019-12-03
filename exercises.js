@@ -10,18 +10,15 @@ const cellphone = {
     return this.contacts.length;
   },
   lookUp(str) {
-    for(let key of this.contacts) {
-      if(key.name === str) {
-        return key.phoneNumber;
-      }
+    for(let key in this.contacts) {
+      if (this.contacts[person].name === name)return this.contacts[person].number;
     }
     return 'Contact not found.'
   },
   deleteContact(str) {
-    for(let key of this.contacts) {
-      if(key.name === str) {
-        delete key.name;
-        delete key.phoneNumber;
+    for(let key in this.contacts) {
+      if(this.contacts[key].name === str) {
+        delete key;
         return `${str} successfully deleted.`
       }
     }
