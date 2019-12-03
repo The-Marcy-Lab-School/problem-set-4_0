@@ -16,13 +16,15 @@ cellphone.contacts.push({
 });
 
 //5
-cellphone.contacts.addContact = function (name, phoneNumber) {
-  this.push({
+cellphone.addContact = function (name, phoneNumber) {
+  this.contacts.push({
     name: name,
     phoneNumber: phoneNumber,
   });
   return `${name} successfully added.`;
 };
+
+console.log(cellphone.addContact('hello', 'world'));
 
 //6
 cellphone.contacts.addContact('santa', '404040');
@@ -31,14 +33,14 @@ cellphone.contacts.addContact('spaghetti-monster', '666');
 
 //7
 cellphone.numberOfContacts = function () {
-  return this.contacts.length();
+  return this.contacts.length;
 };
 
 //8
 //interrogate el's of contact, include index in call back function, return if found
 cellphone.lookUp = function (name) {
-  if ('name is the value of a key in one of the contact objects in that array') {
-    return 'number in that contact';
+  if (cellphone.contacts.find((contact, index) => { contact.name === name })) {
+    return 'its in there somewhere';
   }
   return 'Contact not found.';
 };
