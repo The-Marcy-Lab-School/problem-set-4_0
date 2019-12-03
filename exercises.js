@@ -4,26 +4,36 @@ const cellphone = { // Answer #1
     cellphone.contacts.push({name, phoneNumber});
     return `${name} successfully added`
   },
-  numberOfContacts: function(){ //Answer #7
-    return this.contacts.length;
-  },
   lookUp: function(str){
-    for(let key in this.contacts){
-      if(this.contacts[key].name === str) return this.contacts[key].phoneNumber
-    }
-    return 'Contact not found'
+    let result = this.contacts.find((contact) => contact.name === str);
+    return result ? result.phoneNumber: 'Contact not found';
   },
   deleteContact: function(str){
-    for(let key in this.contacts){
-      if(this.contacts[key].name === str){
-        delete this.contacts[key]
-        return `${str} successfully deleted`
-      } 
-    }
-    return 'Contact not found';
+    let result = this.contacts.find((contact) => contact.name === str);
+    if(!result) return 'Contact not found.'
+    let deleteIndex = this.contacts.indexOf(result);
+    this.contacts.splice(deleteIndex,1)
+    return `${str} successfully deleted.`
   },  
   
 };
+
+ let numberOfContacts = function(){ //Answer #7
+    return this.contacts.length;
+  }
+  
+  cellphone.call = function(str){
+    let result = this.contacts.find((contact) => {
+      return contact.name === str || contact.phoneNumber === str;
+    });
+    if(result){
+      return `Calling ${result.name} at ${result.phoneNumber}`
+    } else{
+      return 'Contact not found'
+    }
+  };
+  
+
 cellphone.model = 'I-phone'; //Answer #2
 cellphone.contacts = []; // Answer #3
 cellphone.contacts.push({name:'Paul',phoneNumber:'3473327880'}); //Answer #4
@@ -34,7 +44,18 @@ console.log(cellphone);
 console.log(cellphone.numberOfContacts());
 
 
-
+const makeCellPhone = function(phoneNumber, model){
+  return{
+    phoneNumber,
+    model,
+    contacts: [],
+    addContact: function(name,phoneNumber) { //Answer #5
+    cellphone.contacts.push({name, phoneNumber});
+    return `${name} successfully added`
+  },
+  numberOfContacts: numberOfContacts,
+  }
+}
 
 
 
