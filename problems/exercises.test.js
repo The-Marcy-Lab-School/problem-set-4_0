@@ -21,8 +21,8 @@ test('Question 3: contacts property is an array', () => {
 
 test('Question 4: contact was added to contacts property', () => {
   expect(cellphone.contacts.length).toBeGreaterThanOrEqual(1);
-  expect(cellphone.contacts[0].name).not.toBeUndefined(0);
-  expect(cellphone.contacts[0].phoneNumber).not.toBeUndefined(0);
+  expect(cellphone.contacts[0].name).not.toBeUndefined();
+  expect(cellphone.contacts[0].phoneNumber).not.toBeUndefined();
 });
 
 test('Question 5: addContact method adds to contacts array', () => {
