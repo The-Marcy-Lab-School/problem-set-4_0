@@ -62,6 +62,7 @@ test('Question 9: deleteContact works', () => {
 
 test('Question 10: call works for name', () => {
   expect(cellphone.call('Reuben Ogbonna')).toBe('Calling Reuben Ogbonna at 9196219388');
+  expect(cellphone.call('Ann')).toBe('Calling Ann at 0987654321');
   expect(cellphone.call('9196219388')).toBe('Calling Reuben Ogbonna at 9196219388');
   expect(cellphone.call(Math.random().toString())).toBe('Contact not found.');
 });
