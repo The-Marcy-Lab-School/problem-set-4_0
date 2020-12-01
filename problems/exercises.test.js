@@ -21,15 +21,13 @@ test('Question 3: contacts property is an array', () => {
 
 test('Question 4: contact was added to contacts property', () => {
   expect(cellphone.contacts.length).toBeGreaterThanOrEqual(1);
+  expect(cellphone.contacts[0].name).not.toBeUndefined();
+  expect(cellphone.contacts[0].phoneNumber).not.toBeUndefined();
 });
 
-test('Question 5: has an addContact method', () => {
-  expect(cellphone.addContact).not.toBeUndefined();
-});
-
-
-test('Question 6: addContact method adds to contacts array', () => {
+test('Question 5: addContact method adds to contacts array', () => {
   let contactCount = cellphone.contacts.length;
+  expect(cellphone.addContact).not.toBeUndefined();
   expect(cellphone.addContact('Reuben Ogbonna', '9196219388')).toBe('Reuben Ogbonna successfully added.');
   expect(cellphone.addContact('Ann', '0987654321')).toBe('Ann successfully added.');
   expect(cellphone.contacts.length).toBe(contactCount + 2);
@@ -37,6 +35,10 @@ test('Question 6: addContact method adds to contacts array', () => {
   expect(cellphone.contacts.some((contact) => contact.name === 'Ann')).toBe(true);
   expect(cellphone.contacts.some((contact) => contact.phoneNumber === '9196219388')).toBe(true);
   expect(cellphone.contacts.some((contact) => contact.phoneNumber === '0987654321')).toBe(true);
+});
+
+test('Question 6: Contacts were added to contacts property', () => {
+  expect(cellphone.contacts.length).toBeGreaterThanOrEqual(3);
 });
 
 test('Question 7: numberOfContacts works', () => {
@@ -60,6 +62,7 @@ test('Question 9: deleteContact works', () => {
 
 test('Question 10: call works for name', () => {
   expect(cellphone.call('Reuben Ogbonna')).toBe('Calling Reuben Ogbonna at 9196219388');
+  expect(cellphone.call('Ann')).toBe('Calling Ann at 0987654321');
   expect(cellphone.call('9196219388')).toBe('Calling Reuben Ogbonna at 9196219388');
   expect(cellphone.call(Math.random().toString())).toBe('Contact not found.');
 });

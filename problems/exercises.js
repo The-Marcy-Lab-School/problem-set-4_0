@@ -111,6 +111,6 @@ const makeCellPhone = function(phoneNumber, model) {
 }
 
 module.exports = {
-cellphone,
-makeCellPhone,
+  cellphone,
+  makeCellPhone,
 };

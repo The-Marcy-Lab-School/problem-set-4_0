@@ -4,7 +4,7 @@
 ### Directions
 There are two parts to this problem set:
 * A written response section
-* JavaScript Array exercises
+* Coding exercises
 
 **For Coding Exercises:**
 
