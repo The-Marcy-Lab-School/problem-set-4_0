@@ -16,7 +16,6 @@
         "ecmaVersion": 2018
     },
     "rules": {
-        "no-console": "off",
         "func-names": "off",
         "space-before-function-paren": "off",
         "quotes": "off",
