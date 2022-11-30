@@ -7,4 +7,4 @@ Answer short response questions directly in this markdown file. Answer questions
 
 **3. What are factory functions and why are they useful?**
 
-**4. Write a code snippet in which you create a Person factory function with at least two data properties. Then, in that same code snippet, create an instance of a _Person_.**
+**4. Write a code snippet in which you create a Person factory function with at least two data properties. Then, in that same code snippet, use your factory function to create a _Person_ object.**
