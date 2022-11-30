@@ -5,6 +5,6 @@ Answer short response questions directly in this markdown file. Answer questions
 
 **2. How do JavaScript objects encapsulate state? How do they encapsulate behavior?**
 
-**3. What is the convention for creating _private data_ within JavaScript objects? What is the role of _accessor properties_?**
+**3. What are factory functions and why are they useful?**
 
-**4. What are factory functions and why are they useful?**
+**4. Write a code snippet in which you create a Person factory function with at least two data properties and create an instance of a _Person_.**
