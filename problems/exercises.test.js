@@ -87,6 +87,9 @@ test('Question 10: call works for name', () => {
 
 test('Question 11: makeCellPhone factory function', () => {
   const reubensCell = makeCellPhone('9196219388', 'iPhone XR');
+  const annesCell = makeCellPhone('1111111111', 'Flip Phone');
+  expect(annesCell === reubensCell).toBe(false);
+  
   expect(typeof reubensCell).toBe("object");
   expect(reubensCell.phoneNumber).toBe('9196219388');
   expect(reubensCell.model).toBe('iPhone XR');
