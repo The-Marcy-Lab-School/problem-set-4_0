@@ -64,10 +64,10 @@ test('Question 8: lookUp works', () => {
 test('Question 9: deleteContact works', () => {
   let cellphoneCopy = {...cellphone};
   cellphoneCopy.contacts = [];
+  cellphoneCopy.contacts.push({name: 'Jim Smith', phoneNumber: '9876543210'});
   expect(cellphoneCopy.addContact).not.toBeUndefined();
   expect(cellphoneCopy.addContact('Reuben Ogbonna', '9196219388')).toBe('Reuben Ogbonna successfully added.');
   expect(cellphoneCopy.addContact('Ann', '0987654321')).toBe('Ann successfully added.');
-  cellphoneCopy.contacts.push({name: 'Jim Smith', phoneNumber: '9876543210'});
   expect(cellphoneCopy.deleteContact('Jim Smith')).toBe('Jim Smith successfully deleted.');
   expect(cellphoneCopy.contacts.some((contact) => contact.name === 'Jim Smith')).toBe(false);
   expect(cellphoneCopy.deleteContact(Math.random().toString())).toBe('Contact not found.');
